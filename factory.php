@@ -11,6 +11,7 @@ Debes aplicar el patrón de diseño Factory para la creación de los personajes.
 
 
 // Creación de interface Personaje para definir métodos comunes
+// Es el intermediario entre la fábrica y los productos (clases) a crear
 interface Personaje
 {
     public function atacar(); // Todos los métodos de una interfaz deben ser públicos, porque son contratos públicos
@@ -61,21 +62,15 @@ class PersonajeFctory // es un taller para crear personajes
     }
 }
 
-try {
-    $nivel = "dificil";
+$nivel = "dificil";
 
-    // Se usa la fábrica para crear al personaje
-    $personaje = PersonajeFctory::crearPersonaje($nivel); // Llamada válida gracias a que el método es estático, porlo que no se usa:
-    /*$factory = new PersonajeFactory();
+// Se usa la fábrica para crear al personaje
+$personaje = PersonajeFctory::crearPersonaje($nivel); // Llamada válida gracias a que el método es estático, porlo que no se usa:
+/*  $factory = new PersonajeFactory();
     $personaje = $factory->crearPersonaje("dificil");*/
 
-    // Se muestra la info del PJ
-    echo "Nivel del juego: $nivel\n";
-    echo $personaje->atacar() . "\n"; //el operador . concatena (une) cadenas. atacar() + \n
-    echo $personaje->mover() . "\n";
-
-} catch (Exception $errorMessage) {
-    echo "Error: " . $erroMessage->getMessage(); //une la etiqueta "Error: " con el mensaje real de la excepción
-}
-
+// Se muestra la info del PJ
+echo "Nivel del juego: $nivel\n";
+echo $personaje->atacar() . "\n"; //el operador . concatena (une) cadenas. atacar() + \n
+echo $personaje->mover() . "\n";
 ?>
