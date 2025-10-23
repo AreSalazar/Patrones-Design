@@ -46,6 +46,7 @@ class AdapterWindows10 implements SistemaOperativo{
     }
 }
 
+//Probando
 echo "Simulación de compatibilidad de Archivos\n\n";
 
 // Creación de una instancia del sistema antiguo

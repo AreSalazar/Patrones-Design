@@ -62,6 +62,7 @@ class PersonajeFctory // es un taller para crear personajes
     }
 }
 
+//Probando
 $nivel = "dificil";
 
 // Se usa la fábrica para crear al personaje

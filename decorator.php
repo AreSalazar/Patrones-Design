@@ -57,6 +57,7 @@ class Hacha extends ArmaDecorator{
     }
 }
 
+//Probando
 //Creacion de los personajes normalmente
 $mago = new Mago();
 $valquiria = new Valquiria();
